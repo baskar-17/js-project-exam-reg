@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for your exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video class="bg-video" autoplay muted loop>
+        <source src="assets/Blue Dark Blue Gradient Color and Style Video Background.mp4" type="video/mp4">
+    </video>
+    <div class="onboarding">
+
+        <div id="onboarding" class="onboarding-container ">
+            <div class="form-heading">
+                <h2>Registration</h2>
+                <p>Enter the below details to get registered for the online exam.</p>
+            </div>
+            <form class="onboarding-form">
+                <div class="input">
+                    <label for="name">Full Name</label>
+                    <input class="error-input" id="userName" type="text" placeholder="Enter candidate full name">
+                    <p id="nameError" class="error d-none">Please enter a your full name</p>
+                </div>
+                <div class="input">
+                    <label for="email address">Email Address</label>
+                    <input id="userEmail" type="email" placeholder="Enter candidate email">
+                    <p id="emailError" class="error d-none">Please enter a valid email address</p>
+                </div>
+                <div class="input">
+                    <label for="age">Age *</label>
+                    <input id="userAge" type="text" onkeypress="isInputNumber(event)" placeholder="Enter candidate age">
+                    <p id="ageError" class="error d-none">Please enter your age</p>
+                </div>
+                <div class="input">
+                    <label for="city">Current City</label>
+                    <input id="userCity" type="text" placeholder="Enter candidate city">
+                </div>
+            </form>
+            <button class="pri-btn" id="pri-btn" onclick="register()">Register Now</button>
+        </div>
+
+        <div id="eligibleCandidate" class="eligible-container d-none">
+            <div class="after-reg">
+                <h2>You're eligible for online exam 🎉</h2>
+                <p>Please find the below details for your next online exam and be prepared, All the Best!!</p>
+            </div>
+            <div class="user-details">
+                <div class="table">
+                    <p>Application ID</p>
+                    <h4 id="appId">AS12A5D1</h4>
+                </div>
+                <div class="table">
+                    <p>User Name</p>
+                    <h4 id="name">Sample user name</h4>
+                </div>
+                <div class="table">
+                    <p>Email Address</p>
+                    <h4 id="email">sample@mail.com</h4>
+                </div>
+                <div class="table">
+                    <p>Your Age</p>
+                    <h4 id="age">24</h4>
+                </div>
+                <div class="table">
+                    <p>City</p>
+                    <h4 id="city">Chennai</h4>
+                </div>
+                <div class="table">
+                    <p>Exam center</p>
+                    <h4 id="center">VDS HSS</h4>
+                </div>
+                <div class="table">
+                    <p>Center code</p>
+                    <h4 id="centerCode">58A4</h4>
+                </div>
+                <div class="table">
+                    <p>Center location</p>
+                    <h4 id="location">Bangalore</h4>
+                </div>
+            </div>
+            <button class="pri-btn" id="pri-btn">Print</button>
+            <button class="sec-btn" id="pri-btn" onclick="back()">Back to Registration</button>
+        </div>
+
+        <div id="notEligibleCandidate" class="not-eligible-container d-none">
+            <div class="after-reg">
+                <h2>You're not eligible for online exam ☹️</h2>
+                <p>Based on the data you provided, we found you're not eligible for this exam.
+                    <span class="link">Learn More</span>
+                </p>
+            </div>
+            <button class="pri-btn" id="ne-btn" onclick="back()">Back to Registration</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
